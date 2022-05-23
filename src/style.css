@@ -1,0 +1,23 @@
+div#options {
+    display: flex;
+    align-content: space-around;
+    place-content: center;
+}
+
+div#size {
+    margin: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    user-select: none;
+    display: flex;
+    place-content: center;
+}
+
+td {
+    width: 30px;
+    height: 30px;
+    border: black 1px solid;
+    white-space: nowrap;
+}
