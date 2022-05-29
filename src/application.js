@@ -9,6 +9,15 @@ function generate() {
     let x = document.getElementById("width").value;
     let y = document.getElementById("height").value;
 
+    if  (x<3 || x>100) {
+        x = 5;
+        document.getElementById("width").value = 5;
+    }
+    if  (y<3 || y>100) {
+        y = 5;
+        document.getElementById("height").value = 5;
+    }
+
 
     generateSolution(y, x);
     let side = getSideStrings(solution, " ");
@@ -198,5 +207,3 @@ function showSolutions() {
     testtestIfWon();
     console.log(board);
 }
-
-alert([1,2,3,4,5,6].toString());
