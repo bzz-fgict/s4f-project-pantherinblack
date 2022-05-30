@@ -4,6 +4,7 @@ let type = "Undefined";
 let solution;
 let board;
 let running = false;
+let highscores
 
 function generate() {
     let x = document.getElementById("width").value;
@@ -206,4 +207,61 @@ function showSolutions() {
     }
     testtestIfWon();
     console.log(board);
+}
+
+function getCookie(index) {
+    text = ""
+
+    for (hs : highscores) {
+        text.append(hs.getWidth()+";"+hs.getHeight()+";"+hs.getTime()+";"+hs.getDate())
+    }
+
+
+    document.cookie = "expires="+new Date().toUTCString(Date.now()+24*60*60*1000)+"path=/ content="+;
+}
+
+class HighScore {
+    constructor(width, height, time, date) {
+        if (date==null)
+            date = Date.now();
+        else
+            this.date = date;
+        this._width = width;
+        this._height = height;
+        this._time = time;
+        this._date = date;
+    }
+
+
+    get width() {
+        return this._width;
+    }
+
+    set width(value) {
+        this._width = value;
+    }
+
+    get height() {
+        return this._height;
+    }
+
+    set height(value) {
+        this._height = value;
+    }
+
+    get time() {
+        return this._time;
+    }
+
+    set time(value) {
+        this._time = value;
+    }
+
+    get date() {
+        return this._date;
+    }
+
+    set date(value) {
+        this._date = value;
+    }
 }
