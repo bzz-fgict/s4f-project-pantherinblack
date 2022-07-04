@@ -209,16 +209,7 @@ function showSolutions() {
     console.log(board);
 }
 
-function getCookie(index) {
-    text = ""
 
-    for (hs : highscores) {
-        text.append(hs.getWidth()+";"+hs.getHeight()+";"+hs.getTime()+";"+hs.getDate())
-    }
-
-
-    document.cookie = "expires="+new Date().toUTCString(Date.now()+24*60*60*1000)+"path=/ content="+;
-}
 
 class HighScore {
     constructor(width, height, time, date) {
